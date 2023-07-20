@@ -1,0 +1,10 @@
+    <filter>
+        <filter-name>SecurityFilter</filter-name>
+        <filter-class>webi2ms.addHeader.SecurityFilter</filter-class>
+        <async-supported>true</async-supported>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecurityFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
