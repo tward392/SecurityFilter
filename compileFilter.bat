@@ -1,0 +1,4 @@
+rem ---add this to the end to get the output to a file  2>errors.txt
+E:\ORDS\jdk-17.0.6\bin\javac -cp ".\;C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar;C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina.jar;C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util.jar;C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin\tomcat-juli.jar" webi2ms\addHeader\MutableHttpServletRequest.java
+E:\ORDS\jdk-17.0.6\bin\javac -cp ".\;C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\servlet-api.jar;C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\catalina.jar;C:\Program Files\Apache Software Foundation\Tomcat 9.0\lib\tomcat-util.jar;C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin\tomcat-juli.jar" SecurityFilter.java
+E:\ORDS\jdk-17.0.6\bin\jar cfv SecurityFilter.jar *.class
