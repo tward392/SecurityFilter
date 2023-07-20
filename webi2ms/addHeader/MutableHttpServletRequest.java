@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-//import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,33 +35,6 @@ final class MutableHttpServletRequest extends HttpServletRequestWrapper {
         return ((HttpServletRequest) getRequest()).getHeader(name);
     }
 
-/****************************************************************************************************************/
-/* TJW didn't fix it
-    public Enumeration<String> getHeaders(String name) {
-        if (null != name && name.equals("userid")) {
-            return new Enumeration<String>() {
-                private boolean hasGetted = false;
-
-                @Override
-                public boolean hasMoreElements() {
-                    return !hasGetted;
-                }
-
-                @Override
-                public String nextElement() {
-                    if (hasGetted) {
-                        throw new NoSuchElementException();
-                    } else {
-                        hasGetted = true;
-                        return customHeaders.get(name);
-                    }
-                }
-            };
-        }
-        return super.getHeaders(name);
-
-    }
-*/
     @Override
     public Enumeration<String> getHeaders(String name) {
         Set<String> set = new HashSet<>();
